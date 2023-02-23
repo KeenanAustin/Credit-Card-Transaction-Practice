@@ -1,0 +1,13 @@
+def match(_database_record: dict, _transaction: dict) -> bool:
+  if _database_record["name"] == _transaction["name"] and _database_record["number"] == _transaction["number"] and _database_record["address"] == _transaction["address"]:
+    return True
+  else:
+    return False
+  # if _database_record["name"] == _database_record["number"] == _database_record["address"]:
+  # raise NotImplementedError("Your name address and customer number should not be the same")
+
+database_record = {"name": "Grisha Brenden", "number": "12395", "address": "995 Regent Dr"}
+transaction = {"name": "Grisha Brenden", "number": "12395", "address": "995 Regent Dr"}
+assert match(_database_record=database_record, _transaction=transaction)
+
+match(database_record, transaction)
